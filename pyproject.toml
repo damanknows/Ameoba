@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ameoba"
+version = "0.1.0"
+description = "Android Metadata & Epistemically-bounded OSINT Briefing Architecture"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pillow", "rich"]
+
+[project.scripts]
+ameoba-scan = "ameoba.carver.corpus_scanner:main"
+ameoba-carve = "ameoba.carver.wal_carver:main"
+
+[tool.setuptools]
+packages = ["ameoba", "ameoba.carver", "ameoba.chronolocation", "ameoba.spatial_pose", "ameoba.hash_hunter", "ameoba.firewall", "ameoba.briefing_agent"]
+package-dir = {"ameoba" = "ameoba"}

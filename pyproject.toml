@@ -13,6 +13,12 @@ dependencies = ["pillow", "rich"]
 [project.scripts]
 ameoba-scan = "ameoba.carver.corpus_scanner:main"
 ameoba-carve = "ameoba.carver.wal_carver:main"
+ameoba-chrono = "ameoba.chronolocation.chrono_verify:main"
+ameoba-pose = "ameoba.spatial_pose.pose_matcher:main"
+ameoba-hunt = "ameoba.hash_hunter.evidence_hunter:main"
+ameoba-brief = "ameoba.firewall.briefing_generator:main"
+ameoba-audio = "ameoba.firewall.tts_briefing:main"
+ameoba-simulate = "ameoba.runner:main"
 
 [tool.setuptools]
 packages = ["ameoba", "ameoba.carver", "ameoba.chronolocation", "ameoba.spatial_pose", "ameoba.hash_hunter", "ameoba.firewall", "ameoba.briefing_agent"]
